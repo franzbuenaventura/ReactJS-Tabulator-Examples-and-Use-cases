@@ -2,58 +2,7 @@ import React from "react";
 import "react-tabulator/lib/styles.css"; // required styles
 import "react-tabulator/lib/css/tabulator.min.css"; // theme
 import BasicTable from "./examples/BasicTable";
-
-const data = [
-  {
-    id: 1,
-    name: "Oli Bob",
-    age: "12",
-    color: "red",
-    dob: "01/01/1980",
-    rating: 5,
-    passed: true,
-    pets: ["cat", "dog"],
-  },
-  {
-    id: 2,
-    name: "Mary May",
-    age: "1",
-    color: "green",
-    dob: "12/05/1989",
-    rating: 4,
-    passed: true,
-    pets: ["cat"],
-  },
-  {
-    id: 5,
-    name: "Margret Marmajuke",
-    age: "16",
-    color: "yellow",
-    dob: "07/01/1999",
-    rating: 4,
-    passed: false,
-  },
-  {
-    id: 6,
-    name: "Van Ng",
-    age: "37",
-    color: "green",
-    dob: "06/10/1982",
-    rating: 4,
-    passed: true,
-    pets: ["dog", "fish"],
-  },
-  {
-    id: 7,
-    name: "Duc Ng",
-    age: "37",
-    color: "yellow",
-    dob: "10/10/1982",
-    rating: 4,
-    passed: true,
-    pets: ["dog"],
-  },
-];
+import NestedTable from "./examples/NestedTable";
 
 const exampleList = [
   {
@@ -76,10 +25,11 @@ export default class App extends React.Component {
 
     switch (ex) {
       case "basic":
-        return <BasicTable data={data} />;
+        return <BasicTable />;
       case "nested":
+        return <NestedTable />;
       default:
-        return <BasicTable data={data} />;
+        return <BasicTable />;
     }
   }
 
